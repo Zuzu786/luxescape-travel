@@ -1,10 +1,10 @@
 # Luxescape Travel — Supabase Setup
 
-This project connects to your own Supabase project (`cfefaameowmukkhusdhm`).
+This project connects to the Supabase project configured in your local `.env`.
 
 ## 1. Run the SQL
 
-Open the [Supabase SQL editor](https://supabase.com/dashboard/project/cfefaameowmukkhusdhm/sql/new) and paste/run the contents of `SUPABASE_SETUP.sql`.
+Open your Supabase project's SQL editor and paste/run the contents of `SUPABASE_SETUP.sql`.
 
 This creates:
 

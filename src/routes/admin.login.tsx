@@ -69,12 +69,6 @@ function Login() {
             {mode === "signin" ? "Need an account? Sign up" : "Have an account? Sign in"}
           </button>
         </form>
-        <p className="mt-8 text-xs text-ivory/40 leading-relaxed">
-          After signing up, run this in your Supabase SQL editor to grant admin:
-          <code className="block mt-2 bg-ivory/5 p-2 text-gold/80 text-[10px] break-all">
-            insert into user_roles (user_id, role) values ((select id from auth.users where email='YOUR_EMAIL'), 'admin');
-          </code>
-        </p>
       </div>
     </div>
   );

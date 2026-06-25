@@ -1,5 +1,5 @@
 -- Luxescape Travel — initial schema
--- Run this in https://supabase.com/dashboard/project/cfefaameowmukkhusdhm/sql/new
+-- Run this in your Supabase project's SQL editor.
 
 do $$ begin
   create type public.app_role as enum ('admin', 'user');

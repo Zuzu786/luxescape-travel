@@ -1,11 +1,13 @@
 import { createClient } from "@supabase/supabase-js";
 
-const url =
-  import.meta.env.VITE_SUPABASE_URL ||
-  "https://cfefaameowmukkhusdhm.supabase.co";
-const anon =
-  import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY ||
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNmZWZhYW1lb3dtdWtraHVzZGhtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI0MDY3MDksImV4cCI6MjA5Nzk4MjcwOX0.osPwHGN7ZtV0MiBhF30n_u7oZI8251TnkLM9riZYOCg";
+const url = import.meta.env.VITE_SUPABASE_URL;
+const anon = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+
+if (!url || !anon) {
+  throw new Error(
+    "Missing Supabase environment variables. Set VITE_SUPABASE_URL and VITE_SUPABASE_PUBLISHABLE_KEY in .env.",
+  );
+}
 
 export const supabase = createClient(url, anon, {
   auth: {
