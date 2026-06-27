@@ -69,8 +69,8 @@ export function Header() {
           </div>
         </nav>
 
-        <Link to="/contact" className="hidden lg:inline-flex btn-gold">
-          Reserve
+        <Link to="/book" className="hidden lg:inline-flex btn-gold">
+          Book
         </Link>
 
         <button
@@ -99,7 +99,7 @@ export function Header() {
             <Link to="/faq" onClick={() => setOpen(false)} className="block hover:text-gold">FAQ</Link>
             <Link to="/terms" onClick={() => setOpen(false)} className="block hover:text-gold">Terms &amp; Conditions</Link>
           </div>
-          <Link to="/contact" onClick={() => setOpen(false)} className="btn-gold mt-4">Reserve</Link>
+          <Link to="/book" onClick={() => setOpen(false)} className="btn-gold mt-4">Book</Link>
         </div>
       )}
     </header>

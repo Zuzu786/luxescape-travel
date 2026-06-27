@@ -40,7 +40,7 @@ function Home() {
           </p>
           <div className="reveal mt-10 flex flex-wrap gap-4">
             <Link to="/tours" className="btn-gold">Explore Tours <ArrowRight size={16} /></Link>
-            <Link to="/contact" className="btn-ghost-gold">Reserve a Journey</Link>
+            <Link to="/book" className="btn-ghost-gold">Book a Journey</Link>
           </div>
         </div>
         <div className="absolute bottom-8 right-8 hidden md:block text-right text-ivory/60 text-xs uppercase tracking-[0.3em]">
