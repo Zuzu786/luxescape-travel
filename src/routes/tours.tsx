@@ -28,7 +28,8 @@ function Tours() {
         {TOURS.map((t, i) => (
           <Link
             key={t.slug}
-            to="/contact"
+            to="/book"
+            search={{ tour: t.slug }}
             className="group grid gap-8 lg:grid-cols-12 items-center border-t border-charcoal/15 pt-8 reveal hover:bg-charcoal hover:text-ivory transition-colors duration-500 px-2"
           >
             <div className="lg:col-span-1 font-display text-3xl text-gold">0{i + 1}</div>
