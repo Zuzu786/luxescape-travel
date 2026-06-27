@@ -69,8 +69,8 @@ export function Header() {
           </div>
         </nav>
 
-        <Link to="/contact" className="hidden lg:inline-flex btn-gold">
-          Reserve
+        <Link to="/book" className="hidden lg:inline-flex btn-gold">
+          Book
         </Link>
 
         <button
