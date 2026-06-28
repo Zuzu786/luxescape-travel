@@ -14,9 +14,9 @@ export const Route = createFileRoute("/book")({
   validateSearch: (s) => searchSchema.parse(s),
   head: () => ({
     meta: [
-      { title: "Book a Journey — Luxescape Travel" },
+      { title: "Book a Journey - Luxescape Travel" },
       { name: "description", content: "Reserve a luxury tour or service with Luxescape Travel — bespoke Cape Town experiences." },
-      { property: "og:title", content: "Book a Journey — Luxescape Travel" },
+      { property: "og:title", content: "Book a Journey - Luxescape Travel" },
       { property: "og:description", content: "Reserve a luxury tour or service with Luxescape Travel." },
     ],
   }),

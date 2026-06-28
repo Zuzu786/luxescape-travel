@@ -8,9 +8,9 @@ import { Toaster } from "@/components/ui/sonner";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Luxescape Travel" },
+      { title: "Contact - Luxescape Travel" },
       { name: "description", content: "Get in touch to plan your journey. hello@luxescapetravel.co.za" },
-      { property: "og:title", content: "Contact — Luxescape Travel" },
+      { property: "og:title", content: "Contact - Luxescape Travel" },
     ],
   }),
   component: Contact,
