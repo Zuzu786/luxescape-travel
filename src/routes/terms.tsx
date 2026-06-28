@@ -3,7 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/terms")({
   head: () => ({
     meta: [
-      { title: "Terms & Conditions — Luxescape Travel" },
+      { title: "Terms & Conditions - Luxescape Travel" },
       { name: "description", content: "Terms and conditions for Luxescape Travel services, including inclusions, payments, and cancellation policy." },
     ],
   }),
@@ -43,7 +43,7 @@ function Terms() {
           </Section>
 
           <Section title="Itinerary Flexibility">
-            <p>Planned itineraries are flexible and can be adjusted to your needs. However, last minute special requests or changes to the itinerary — such as additional trips requested by the client — will result in additional charges.</p>
+            <p>Planned itineraries are flexible and can be adjusted to your needs. However, last minute special requests or changes to the itinerary, such as additional trips requested by the client will result in additional charges.</p>
             <p className="mt-3">Prices are quoted at the ruling daily exchange rate as on 8 February 2026.</p>
           </Section>
 

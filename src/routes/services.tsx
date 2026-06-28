@@ -6,9 +6,9 @@ import car from "@/assets/luxury-car.jpg";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Luxescape Travel" },
+      { title: "Services - Luxescape Travel" },
       { name: "description", content: "VIP, chauffeur, group shuttles, corporate travel, event management, luxury accommodation, concierge, bulletproof vehicles and CPOs." },
-      { property: "og:title", content: "Services — Luxescape Travel" },
+      { property: "og:title", content: "Services - Luxescape Travel" },
       { property: "og:image", content: "/icon-512.png" },
     ],
   }),
@@ -35,7 +35,7 @@ function Services() {
         </div>
         <div className="lg:col-span-4 reveal">
           <p className="text-lg text-charcoal/70 leading-relaxed">
-            A complete ecosystem of travel, transport, hospitality and protection — built to the highest standard, delivered with discretion.
+            A complete ecosystem of travel, transport, hospitality and protection built to the highest standard, delivered with discretion.
           </p>
         </div>
       </section>
@@ -57,27 +57,28 @@ function Services() {
         <div className="grid gap-px bg-charcoal/15 border border-charcoal/15 md:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((s, idx) => {
             const Icon = (Icons[s.icon as keyof typeof Icons] as React.FC<{ size?: number; strokeWidth?: number; className?: string }>) ?? Icons.Sparkles;
-            const featured = idx === 0;
+            const featured = s.slug === "vip";
+            const wide = s.slug === "cpos";
             return (
               <article
                 key={s.slug}
-                className={`group bg-ivory p-10 lg:p-12 hover:bg-charcoal hover:text-ivory transition-colors duration-500 reveal min-h-[340px] flex flex-col ${featured ? "lg:col-span-2 lg:row-span-1 bg-charcoal text-ivory" : ""}`}
+                className={`group bg-ivory p-10 lg:p-12 hover:bg-charcoal hover:text-ivory transition-colors duration-500 reveal min-h-[340px] flex flex-col ${featured || wide ? "lg:col-span-2" : ""}`}
               >
                 <div className="flex items-start justify-between">
-                  <span className={`grid h-14 w-14 place-items-center border ${featured ? "border-gold" : "border-charcoal/20 group-hover:border-gold"}`}>
+                  <span className="grid h-14 w-14 place-items-center border border-charcoal/20 group-hover:border-gold">
                     <Icon className="text-gold" size={26} strokeWidth={1.2} />
                   </span>
-                  <span className={`font-display text-sm ${featured ? "text-gold/60" : "text-charcoal/30 group-hover:text-gold/60"}`}>
+                  <span className="font-display text-sm text-charcoal/30 group-hover:text-gold/60">
                     0{idx + 1}
                   </span>
                 </div>
                 <h3 className={`font-display mt-10 ${featured ? "text-4xl lg:text-5xl" : "text-2xl lg:text-3xl"}`}>{s.name}</h3>
-                <p className={`mt-4 text-sm leading-relaxed flex-1 ${featured ? "text-ivory/75 max-w-xl" : "text-charcoal/70 group-hover:text-ivory/70"}`}>
+                <p className={`mt-4 text-sm leading-relaxed flex-1 text-charcoal/70 group-hover:text-ivory/70 ${featured ? "max-w-xl" : ""}`}>
                   {s.desc}
                 </p>
                 <Link
                   to="/contact"
-                  className={`mt-8 text-xs uppercase tracking-[0.25em] inline-flex items-center gap-2 ${featured ? "text-gold" : "link-gold"}`}
+                  className="mt-8 text-xs uppercase tracking-[0.25em] inline-flex items-center gap-2 link-gold"
                 >
                   Request a quote <Icons.ArrowUpRight size={14} />
                 </Link>
@@ -97,7 +98,7 @@ function Services() {
         </div>
         <div className="lg:col-span-8 grid sm:grid-cols-3 gap-px bg-charcoal/15 border border-charcoal/15">
           {[
-            { n: "01", t: "Enquire", d: "Tell us how you travel — destinations, dates, preferences." },
+            { n: "01", t: "Enquire", d: "Tell us how you travel, destinations, dates, preferences." },
             { n: "02", t: "Curate", d: "We design a personalised itinerary with transparent pricing." },
             { n: "03", t: "Travel", d: "Concierge support from departure to your return home." },
           ].map((s) => (
@@ -118,7 +119,7 @@ function Services() {
           <p className="eyebrow reveal">Custom request?</p>
           <h2 className="reveal mt-4 font-display text-5xl lg:text-6xl">Every detail, your way.</h2>
           <p className="reveal mt-6 text-ivory/75 text-lg">
-            Bulletproof vehicles, armed CPOs, executive itineraries or a private island weekend — tell us what you need.
+            Bulletproof vehicles, armed CPOs, executive itineraries or a private island weekend, tell us what you need.
           </p>
           <Link to="/contact" className="btn-gold mt-10 reveal">Speak to a concierge <Icons.ArrowRight size={16} /></Link>
         </div>

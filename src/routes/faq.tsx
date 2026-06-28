@@ -4,9 +4,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
-      { title: "FAQ — Luxescape Travel" },
-      { name: "description", content: "Frequently asked questions about LuxesCape Travel — luxury tours, VIP services, CPOs, bookings and more." },
-      { property: "og:title", content: "FAQ — Luxescape Travel" },
+      { title: "FAQ - Luxescape Travel" },
+      { name: "description", content: "Frequently asked questions about LuxesCape Travel - luxury tours, VIP services, CPOs, bookings and more." },
+      { property: "og:title", content: "FAQ - Luxescape Travel" },
     ],
   }),
   component: FAQ,
@@ -105,7 +105,7 @@ function FAQ() {
           Frequently <span className="italic text-gold">asked</span>.
         </h1>
         <p className="reveal mt-6 text-charcoal/70 leading-relaxed">
-          Not finding the answer you're looking for? Reach us via our contact form, email, or by phone — our concierge team is ready to provide personalised guidance and a detailed quote for your travel plans.
+          Not finding the answer you're looking for? Reach us via our contact form, email, or by phone, our concierge team is ready to provide personalised guidance and a detailed quote for your travel plans.
         </p>
       </section>
 

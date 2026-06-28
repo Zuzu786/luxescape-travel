@@ -5,9 +5,9 @@ import { ArrowUpRight, Clock, MapPin } from "lucide-react";
 export const Route = createFileRoute("/tours")({
   head: () => ({
     meta: [
-      { title: "Tours — Luxescape Travel" },
-      { name: "description", content: "Table Mountain, Safari, Kirstenbosch, Hermanus, Garden Route, Cape Winelands and Cape Peninsula — curated luxury journeys." },
-      { property: "og:title", content: "Tours — Luxescape Travel" },
+      { title: "Tours - Luxescape Travel" },
+      { name: "description", content: "Table Mountain, Safari, Kirstenbosch, Hermanus, Garden Route, Cape Winelands and Cape Peninsula, curated luxury journeys." },
+      { property: "og:title", content: "Tours - Luxescape Travel" },
       { property: "og:image", content: "/icon-512.png" },
     ],
   }),
@@ -28,7 +28,7 @@ function Tours() {
         </div>
         <div className="lg:col-span-4 reveal">
           <p className="text-lg text-charcoal/70 leading-relaxed">
-            From half-day Cape escapes to multi-day Big Five safaris — every itinerary is shaped around how you travel.
+            From half-day Cape escapes to multi-day Big Five safaris, every itinerary is shaped around how you travel.
           </p>
         </div>
       </section>
@@ -79,7 +79,7 @@ function Tours() {
             <h2 className="mt-4 font-display text-4xl lg:text-5xl">The collection.</h2>
           </div>
           <p className="hidden md:block text-sm text-charcoal/50 max-w-xs text-right">
-            Tap any tour to begin the booking — our team confirms within 24 hours.
+            Tap any tour to begin the booking, our team confirms within 24 hours.
           </p>
         </div>
 
@@ -126,7 +126,7 @@ function Tours() {
             Don't see your <span className="italic text-gold">perfect</span> journey?
           </h2>
           <div className="reveal">
-            <p className="text-ivory/70 max-w-md">We design fully bespoke itineraries — anywhere in South Africa and beyond.</p>
+            <p className="text-ivory/70 max-w-md">We design fully bespoke itineraries anywhere in South Africa and beyond.</p>
             <Link to="/contact" className="btn-gold mt-6 inline-flex">Design a custom tour</Link>
           </div>
         </div>

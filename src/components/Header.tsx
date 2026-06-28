@@ -1,6 +1,7 @@
-import { Link, useRouterState } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { Link } from "@tanstack/react-router";
+import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
+import lctLogo from "@/assets/lctlogo.png";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -12,37 +13,17 @@ const nav = [
 ] as const;
 
 export function Header() {
-  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const pathname = useRouterState({ select: (s) => s.location.pathname });
-  const isHome = pathname === "/";
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  const solid = scrolled || !isHome;
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        solid
-          ? "bg-charcoal/90 backdrop-blur-xl border-b border-gold/20"
-          : "bg-transparent"
-      }`}
-    >
-      <div className="mx-auto flex max-w-[1500px] items-center justify-between px-6 py-5 lg:px-12">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-gold/20 bg-charcoal/90 backdrop-blur-xl transition-all duration-500">
+      <div className="mx-auto flex max-w-[1500px] items-center justify-between px-6 py-4 lg:px-12">
         <Link to="/" className="flex items-center gap-3 text-ivory">
-          <span className="grid h-10 w-10 place-items-center border border-gold text-gold font-display text-xl">
-            L
-          </span>
-          <span className="hidden sm:flex flex-col leading-none">
-            <span className="font-display text-lg tracking-wide">Luxescape</span>
-            <span className="text-[10px] uppercase tracking-[0.3em] text-gold/80">Travel</span>
-          </span>
+          <img
+            src={lctLogo}
+            alt="Luxescape Travel"
+            className="h-12 w-auto max-w-[190px] object-contain lg:h-14 lg:max-w-[240px]"
+          />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-10 text-[0.78rem] uppercase tracking-[0.18em] text-ivory">

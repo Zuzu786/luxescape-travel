@@ -21,7 +21,7 @@ function NotFoundComponent() {
       <div className="max-w-md text-center">
         <p className="eyebrow">404</p>
         <h1 className="mt-4 font-display text-5xl">Page not found</h1>
-        <p className="mt-3 text-ivory/70">The page you're looking for has wandered off the route.</p>
+        <p className="mt-3 text-ivory/70">The page you're looking for could not be found.</p>
         <Link to="/" className="btn-gold mt-8">Return Home</Link>
       </div>
     </div>
@@ -54,7 +54,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Luxescape Travel — Luxury Tours & VIP Travel in South Africa" },
+      { title: "Luxescape Travel - Luxury Tours & VIP Travel in South Africa" },
       { name: "description", content: "Triple BEE certified luxury travel: tours, chauffeur, VIP protection, event management and concierge across South Africa." },
       { name: "theme-color", content: "#0d0d0d" },
       { property: "og:title", content: "Luxescape Travel" },
@@ -64,9 +64,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "manifest", href: "/manifest.webmanifest" },
-      { rel: "icon", href: "/icon-512.png", type: "image/png" },
-      { rel: "apple-touch-icon", href: "/icon-512.png" },
+      { rel: "icon", href: "/favicon.ico", sizes: "any" },
+      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+      { rel: "icon", href: "/favicon-96x96.png", type: "image/png", sizes: "96x96" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png", sizes: "180x180" },
+      { rel: "manifest", href: "/site.webmanifest" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" },
